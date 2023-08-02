@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ MM-Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/NjsBmCDH/android-chrome-192x192.png">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5983631767614995"
+     crossorigin="anonymous"></script>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  .educationTxt {
+    font-family: Stencil Std, fantasy;
+  }
+
+  #bodyBox {
+    display: none;
+  }
+  
+
+  /* body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #343F4F;
+} */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper .static-txt {
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    font-weight: 500;
+  }
+
+  .wrapper .dynamic-txts {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+  }
+
+  .dynamic-txts li {
+    list-style: none;
+    color: #f71b1b;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+
+  @keyframes slide {
+    100% {
+      top: -360px;
+    }
+  }
+
+  .dynamic-txts li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+  }
+
+  .dynamic-txts li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    border-left: 2px solid #FC6D6D;
+    animation: typing 3s steps(10) infinite;
+  }
+
+  @keyframes typing {
+
+    40%,
+    60% {
+      left: calc(100% + 30px);
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 560px) {
+
+    .wrapper {
+      flex-direction: column;
+    }
+    
+  }
+
+  @keyframes animationWaves {
+    0% {
+      transform: translateX(0px)
+    }
+
+    100% {
+      transform: translateX(-161px)
+    }
+  }
+  .spinnerBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+  .loader {
+        
+        transform: rotateZ(45deg);
+        perspective: 1000px;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        content: initial;
+        color: rgb(0, 0, 0);
+        
+      }
+        .loader:before,
+        .loader:after {
+          content: '';
+          
+          display: block;
+          position: absolute;
+          /* top: 350px;
+          left: 160px; */
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+          transform: rotateX(70deg);
+          animation: 1s spin linear infinite;
+        }
+        .loader:after {
+          color: #FF3D00;
+          transform: rotateY(70deg);
+          animation-delay: .4s;
+        }
+
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotateZ(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotateZ(360deg);
+        }
+      }
+
+      @keyframes rotateccw {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(-360deg);
+        }
+      }
+
+      @keyframes spin {
+        0%,
+        100% {
+          box-shadow: .2em 0px 0 0px currentcolor;
+        }
+        12% {
+          box-shadow: .2em .2em 0 0 currentcolor;
+        }
+        25% {
+          box-shadow: 0 .2em 0 0px currentcolor;
+        }
+        37% {
+          box-shadow: -.2em .2em 0 0 currentcolor;
+        }
+        50% {
+          box-shadow: -.2em 0 0 0 currentcolor;
+        }
+        62% {
+          box-shadow: -.2em -.2em 0 0 currentcolor;
+        }
+        75% {
+          box-shadow: 0px -.2em 0 0 currentcolor;
+        }
+        87% {
+          box-shadow: .2em -.2em 0 0 currentcolor;
+        }
+      }
+   
+
+  #navbar {
+    background: linear-gradient(321deg, #00ffbd, #ff8900, #ff2f00, #ffc100, #eeff00, #7dff00, #00ff7a, #00fdff, #00a3ff, #a300ff, #e700ff, #ff00a7);
+    background-size: 2400% 2400%;
+
+  -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
+  }
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 41% 0%
+    }
+
+    50% {
+      background-position: 60% 100%
+    }
+
+    100% {
+      background-position: 41% 0%
+    }
+  }
+
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 41% 0%
+    }
+
+    50% {
+      background-position: 60% 100%
+    }
+
+    100% {
+      background-position: 41% 0%
+    }
+  }
+
+  @keyframes AnimationName {
+    0% {
+      background-position: 41% 0%
+    }
+
+    50% {
+      background-position: 60% 100%
+    }
+
+    100% {
+      background-position: 41% 0%
+    }
+  }
+
+  #navbar2 {
+
+    background: linear-gradient(321deg, #00ffbd, #ff8900, #ff2f00, #ffc100, #eeff00, #7dff00, #00ff7a, #00fdff, #00a3ff, #a300ff, #e700ff, #ff00a7);
+    background-size: 2400% 2400%;
+
+    -webkit-animation: AnimationName 18s ease infinite;
+    -moz-animation: AnimationName 18s ease infinite;
+    animation: AnimationName 18s ease infinite;
+  }
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 41% 0%
+    }
+
+    50% {
+      background-position: 60% 100%
+    }
+
+    100% {
+      background-position: 41% 0%
+    }
+  }
+
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 41% 0%
+    }
+
+    50% {
+      background-position: 60% 100%
+    }
+
+    100% {
+      background-position: 41% 0%
+    }
+  }
+
+  @keyframes AnimationName {
+    0% {
+      background-position: 41% 0%
+    }
+
+    50% {
+      background-position: 60% 100%
+    }
+
+    100% {
+      background-position: 41% 0%
+    }
+  }
+  .border-r{
+    border-radius: 18px;
+    /* height: 400px; */
+  }
+
+
+  * {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: max-content;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+ 
+</style>
+
+<body onload=displayBody()>
+  <div class="spinnerBox"id="loaderBox">
+    <span class="loader"></span>
+
+  </div>
+
+
+  
+
+  <div id="bodyBox">
+    <!-- Navbar -->
+
+
+    <header class="text-gray-600 body-font" id="navbar">
+      <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
+        <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+          <a href="/" class="mr-5 hover:text-gray-900">Home</a>
+          <a href="http://about.manashmishraremixer.xyz/" class="mr-5 hover:text-gray-900">About</a>
+          <a href="https://soundcloud.com/manash-mishra-a" class="mr-5 hover:text-gray-900">Sound Cloud</a>
+        </nav>
+        <a
+          class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg> -->
+          <img src="https://i1.sndcdn.com/avatars-000631142337-9wd0m6-t500x500.jpg" alt=""
+            class="w-12 h-12 rounded-full">
+          <span id="text1" class="ml-3 text-xl">Manash Mishra</span>
+        </a>
+        <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+
+        </div>
+      </div>
+    </header>
+    <hr>
+
+    <!-- section 1 -->
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded-2xl" alt="Img"
+          src="https://i.postimg.cc/R0mKkmCB/MainImg.jpgasa">
+        <div class="text-center lg:w-2/3 w-full">
+          <!-- <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Microdosing synth tattooed vexillologist</h1> -->
+          <div class="wrapper">
+            <div class="static-txt">I'm a</div>
+            <ul class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 dynamic-txts">
+              <li><span>LEARNER</span></li>
+              <li><span>DEVELOPER</span></li>
+              <li><span>YOUTUBER</span></li>
+              <li><span>MUSICIAN</span></li>
+            </ul>
+          </div>
+          <p class="mb-8 leading-relaxed">Hi, I am Manash Mishra a Tech Geek from Prayagraj, Welcome to my Website.</p>
+          <div class="flex justify-center">
+            <button
+              class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg items-center "
+              onclick=handleInstaClick()>
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+              Instagram</button>
+            <button
+              class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Upcoming</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    
+
+    <!-- section-2 -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-5 mx-auto flex flex-wrap">
+        <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+          <div class="w-full sm:p-4 px-4 mb-6">
+            <h1 class="title-font font-medium text-xl mb-2 text-gray-900">My Social Media Dashboard</h1>
+            <div class="leading-relaxed">In my Free Time I Love to do some Magic with Music. Statistics and Perfomance
+              on
+              Social Network.</div>
+          </div>
+          <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 class="title-font font-medium text-3xl text-gray-900">343.3K</h2>
+            <p class="leading-relaxed">Sound Cloud</p>
+          </div>
+          <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 class="title-font font-medium text-3xl text-gray-900">1.32K</h2>
+            <p class="leading-relaxed">Subscribes</p>
+          </div>
+          <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 class="title-font font-medium text-3xl text-gray-900">10.2K</h2>
+            <p class="leading-relaxed">Followers</p>
+          </div>
+          <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 class="title-font font-medium text-3xl text-gray-900">135+</h2>
+            <p class="leading-relaxed">Remixes</p>
+          </div>
+          <button
+            class="ml-4 inline-flex text-gray-100 bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded hover:text-gray-900 text-lg">More</button>
+        </div>
+        <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+          <img class="object-cover object-center w-full h-full" src="https://i.postimg.cc/Ls918VcY/20220821-103845.jpg"
+            alt="stats">
+        </div>
+      </div>
+    </section>
+
+    <!-- sec -->
+    <section class="text-gray-600 body-font overflow-hidden">
+      <div class="container px-5 py-10 mx-auto">
+        <h2 class="text-2xl font-medium text-gray-900 title-font mb-2 flex justify-center educationTxt">EDUCATION</h2>
+        <div class="-my-8 divide-y-2 divide-gray-100 my-3">
+          <div class="py-8 flex flex-wrap md:flex-nowrap">
+            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+              <span class="font-semibold title-font text-gray-700">SCHOOLING</span>
+              <span class="mt-1 text-gray-500 text-sm"> Till 2020</span>
+            </div>
+            <div class="md:flex-grow">
+              <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">B.B.S International School</h2>
+              <p class="leading-relaxed">Basic Education Studied till 10th from this School in Prayagraj </p>
+
+            </div>
+          </div>
+          <div class="py-8 flex flex-wrap md:flex-nowrap">
+            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+              <span class="font-semibold title-font text-gray-700">COLLEGE</span>
+              <span class="mt-1 text-gray-500 text-sm">2021</span>
+            </div>
+            <div class="md:flex-grow">
+              <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">F.G College</h2>
+              <p class="leading-relaxed">Ongoing - Diploma in Computer Science & Engineering </p>
+
+            </div>
+          </div>
+          <div class="py-8 flex flex-wrap md:flex-nowrap">
+            <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+              <span class="font-semibold title-font text-gray-700">UPCOMING</span>
+              <span class="text-sm text-gray-500">-----</span>
+            </div>
+            <div class="md:flex-grow">
+              <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">- - - - - - - - - - - - - - - </h2>
+              <p class="leading-relaxed">Secret Plans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- sound cloud -->
+      <!-- Gallery -->
+    <h2 class="text-2xl font-medium text-gray-900 title-font mb-2 flex justify-center educationTxt">Latest Images </h2>  
+  <div class="slideshow-container">
+  <!-- <div class="mySlides1">
+    <img src="PIC_05.jpg" style="width:100%">
+  </div> -->
+
+  <div class="mySlides1">
+    <img src="https://i.postimg.cc/j59y80r7/DSC-6800.jpg" class="img-fluid border-r" alt="...">
+    <!-- <img src="" style="width:100%"> -->
+  </div>
+
+  <div class="mySlides1 ">
+    <img class="img-fluid border-r" src="https://i.postimg.cc/4NR9n14s/PIC-05.jpg" >
+  </div>
+
+  <div class="mySlides1 ">
+    <img  class="img-fluid border-r"src="https://i.postimg.cc/VkV7xT1z/327373694-1219416652325354-8545238042312349230-n.jpg" >
+  </div>
+  <div class="mySlides1 ">
+    <img class="img-fluid border-r" src="https://i.postimg.cc/bvSyQKLM/pic-03.jpg" >
+  </div>
+  <div class="mySlides1">
+    <img class="border-r" src="https://i.postimg.cc/QxN0HsdX/322544474-614426170447916-4829064321186922488-n.jpg" >
+  </div>
+  <div class="mySlides1">
+    <img class="border-r" src="https://i.postimg.cc/QxN0HsdX/322544474-614426170447916-4829064321186922488-n.jpg" class="img-fluid" alt="...">
+    <!-- <img src="https://i.postimg.cc/QxN0HsdX/322544474-614426170447916-4829064321186922488-n.jpg" style="width:100%"> -->
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+          <!-- ... -->
+        </section>
+    
+        
+        <!-- footer -->
+        <hr>
+        <footer class="text-gray-600 body-font" id="navbar2">
+          <div class="container px-2 py-2 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg> -->
+              <img src="https://i1.sndcdn.com/avatars-000631142337-9wd0m6-t500x500.jpg" alt=""
+                class="w-12 h-12 rounded-full">
+    
+              <span class="ml-3 text-xl" id="text2">Manash Mishra</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2022
+              Manash Mishra Remixer
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  <a href="https://www.linkedin.com/in/manash-mishra-918542221/"></a>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                  </path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none"
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                   <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+                
+              </a>
+            </span>
+          </div>
+          
+    
+        </footer>
+      </div>
+    </body>
+
+
+
+      
+    </div class="box2">
+
+<script>
+  var text1 = document.getElementById('text1');
+  function changeText() {
+    text1.innerHTML = 'DJ MM';
+  }
+  setInterval(changeText, 2000)
+  function changeText1() {
+    text1.innerHTML = 'Manash Mishra';
+  }
+  setInterval(changeText1, 4000);
+  
+  
+  var text2 = document.getElementById('text2');
+  function changeText0() {
+    text2.innerHTML = 'DJ MM';
+    console.log('text2')
+  }
+  setInterval(changeText0, 2000)
+  function changeText2() {
+    text2.innerHTML = 'Manash Mishra';
+    console.log('text-2')
+
+  }
+  setInterval(changeText2, 4000);
+
+    
+    function handleInstaClick()
+    {
+      window.open('https://www.instagram.com/manash.djmm/')
+    }
+    function handleAbout() {
+      window.open('http://about.manashmishraremixer.xyz/')
+    }
+
+    function displayBody() {
+      setTimeout(() => {
+        let bodyBox = document.getElementById('bodyBox');
+        bodyBox.style.display = 'block';
+
+        let loadBox = document.getElementById('loaderBox');
+        loadBox.style.display = 'none';
+
+        console.log("body loaded");
+      }, 1600);
+    }
+
+     let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+
+
+// $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+// $(window).on('load', function(){
+//   setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+// });
+// function removeLoader(){
+//     $( "#loadingDiv" ).fadeOut(500, function() {
+//       // fadeOut complete. Remove the loading div
+//       $( "#loadingDiv" ).remove(); //makes page more lightweight 
+//   });  
+// }
+</script>
+
+</html>
